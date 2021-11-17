@@ -24,10 +24,10 @@ import com.fasterxml.jackson.databind.ObjectMapper;
  */
 public class NonNullJsonFactoryDecorator implements JsonFactoryDecorator {
 
-	@Override
-	public JsonFactory decorate(JsonFactory factory) {
-		ObjectMapper codec = (ObjectMapper) factory.getCodec();
-		codec.setSerializationInclusion(JsonInclude.Include.NON_NULL);
-		return factory;
-	}
+    @Override
+    public JsonFactory decorate(JsonFactory factory) {
+        ObjectMapper codec = (ObjectMapper) factory.getCodec();
+        codec.setSerializationInclusion(JsonInclude.Include.NON_NULL);
+        return factory;
+    }
 }
